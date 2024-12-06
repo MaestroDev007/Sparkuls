@@ -34,7 +34,7 @@ const Header = () => {
       animate={isOpen ? "open" : "closed"}
       className={` shadow-xl w-7/12 h-screen ${
         isOpen ? "overflow-hidden" : "overflow-hidden"
-      }   z-50 bg-white fixed md:w-2/12 p-2`}>
+      }   z-50 bg-white fixed md:w-2/12 p-2 lg:hidden`}>
       <div className="flex items-center justify-between text-2xl p-1">
         {/* <figure>
         <img alt="" src={logo} className="size-[px]"/>

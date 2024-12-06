@@ -17,11 +17,12 @@ function App() {
 
       <main>
         <Hero />
+       
         <WashFold />
         <DryClean />
         <Laundromat />
         <Janitorial />
-        <WhyUs />
+        {/* <WhyUs /> */}
       </main>
 
       <footer>
