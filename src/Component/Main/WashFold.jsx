@@ -1,9 +1,19 @@
 import React from "react";
 import img from "../../Images/wash-and-fold.sha256-8b3977f7df57ea560270bb2f5196358fbfb3cb2ab95bea6e58e475776ce94f59.webp";
 import SVGIcon from "../../Config/SVGIcon";
+import img2 from "../../Images/rb_42805.png"
 const WashFold = () => {
   return (
-    <section className=" ">
+    <section className="relative bg-opacity-20 "
+   >
+      <div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat "
+    style={{
+      backgroundImage: `url(${img2})`,
+      opacity: 0.1, // Adjust the opacity as needed
+      zIndex: -1, // Make sure it stays behind the content
+    }}
+  ></div>
       <div className=" pl-16 pr-0 mt-10 lg:flex lg:mx-auto lg:px-16 lg:mt-20 xl:px-[7%]">
         <div className="lg:w-[40%] lg:flex lg:flex-col lg:pt-28">
           <h2 className="sticky text-3xl  text-center font-semibold sm:text-4xl md:text-5xl lg:text-5xl lg:text-left xl:text-6xl">
