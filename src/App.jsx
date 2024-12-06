@@ -21,7 +21,7 @@ function App() {
         <WashFold />
         <DryClean />
         <Laundromat />
-        <Janitorial />
+        {/* <Janitorial /> */}
         {/* <WhyUs /> */}
       </main>
 
