@@ -107,7 +107,7 @@ const Header = () => {
           </div>
           <hr className=""></hr>
           <nav className="flex flex-col h-full mt-10">
-            <ul className="overflow-x-hidden text-[.9rem] py-5 flex flex-col gap-12 whitespace-pre ">
+            <ul className="overflow-x-hidden text-[.9rem] py-5 flex flex-col gap-20 whitespace-pre ">
               {Nav.map((item) => (
                 <li key={item.id}>
                   <NavLink
