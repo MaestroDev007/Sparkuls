@@ -5,17 +5,17 @@ import SVGIcon from "../../Config/SVGIcon";
 // lg:bg-[#1B75BC]
 const Laundromat = () => {
   return (
-    <section className="relative"> 
+    <section className="relative pb-12"> 
     <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat "
     style={{
       backgroundImage: `url(${img2})`,
-      opacity: 0.8, // Adjust the opacity as needed
+      opacity: 0.4, // Adjust the opacity as needed
       zIndex: -1, // Make sure it stays behind the content
     }}
   ></div>
     <div
-      className={`px-10 mt-10 md:mt-24 lg:flex lg:mx-auto lg:px-16 lg:mt-20 xl:px-[7%] lg:flex-col lg:text-white`}>
+      className={`px-10 pt-8 mt-10 md:mt-24 lg:flex lg:mx-auto lg:px-16 lg:mt-20 xl:px-[7%] lg:flex-col lg:text-white`}>
       <div className="flex items-center px-8 lg:px-40 lg:flex lg:items-center lg:justify-center lg:-translate-y-8">
         <div className="flex-grow border-t border-gray-400"></div>
         <span className="mx-4 text-gray-600">Laundromat</span>
@@ -34,7 +34,7 @@ const Laundromat = () => {
       </p>
 
       <div className="hidden lg:flex lg:items-center lg:mt-32 lg:mx-auto lg:gap-8 lg:flex-1">
-          <div className="p-4 h-[300px] border shadow-md rounded-xl flex flex-col gap-4 bg-white text-blue-500 w-[30%] text-center xl:h-[250px] transform transition-transform duration-500 hover:-rotate-1 hover:scale-105">
+          <div className="p-4 h-[300px] border shadow-md rounded-xl flex flex-col gap-4 bg-white text-black w-[30%] text-center xl:h-[250px] transform transition-transform duration-500 hover:-rotate-1 hover:scale-105">
             <div className="flex justify-center items-center">
               <SVGIcon
                 iconName={`Laundromat`}
@@ -52,7 +52,7 @@ const Laundromat = () => {
               </p>
             </div>
           </div>
-          <div className="p-4 h-[300px] border shadow-md rounded-xl flex flex-col gap-4 bg-white text-blue-500 w-[30%] text-center xl:h-[250px] transform transition-transform duration-500 hover:-rotate-1 hover:scale-105">
+          <div className="p-4 h-[300px] border shadow-md rounded-xl flex flex-col gap-4 bg-white text-black w-[30%] text-center xl:h-[250px] transform transition-transform duration-500 hover:-rotate-1 hover:scale-105">
             <div className="flex justify-center items-center">
               <SVGIcon
                 iconName={`time`}
@@ -70,7 +70,7 @@ const Laundromat = () => {
               </p>
             </div>
           </div>
-          <div className="p-4 h-[300px] border shadow-md rounded-xl flex flex-col gap-4 bg-white text-blue-500 w-[30%] text-center xl:h-[250px] transform transition-transform duration-500 hover:-rotate-1 hover:scale-105">
+          <div className="p-4 h-[300px] border shadow-md rounded-xl flex flex-col gap-4 bg-white text-black w-[30%] text-center xl:h-[250px] transform transition-transform duration-500 hover:-rotate-1 hover:scale-105">
             <div className="flex justify-center items-center">
               <SVGIcon
                 iconName={`chill`}
@@ -96,14 +96,14 @@ const Laundromat = () => {
         />
       </figure>
 
-      <p className="pl-4 opacity-80 mt-8  sm:px-[10%] md:px-[15%] md:text-xl lg:hidden">
+      <p className="pl-4 mt-8  sm:px-[10%] md:px-[15%] md:text-xl lg:hidden">
         Washyard Laundromat provides top-tier commercial laundry equipment
         within a calm and engaging environment, turning laundry into an
         enjoyable activity.{" "}
       </p>
 
-      <div className="text-xs flex flex-col gap-12 mx-4 items-center mt-16 opacity-80 rounded-xl shadow-xl border px-2 py-8 sm:text-sm sm:mx-12 md:text-base md:mx-24 lg:hidden">
-        <div className="flex flex-col justify-center items-center">
+      <div className="text-xs flex flex-col gap-12 mx-4 items-center mt-16  rounded-xl shadow-xl border-2 backdrop-blur-sm bg-white/5 px-2 py-8 sm:text-sm sm:mx-12 md:text-base md:mx-24 lg:hidden">
+        <div className="flex flex-col justify-center items-center ">
           <SVGIcon
             iconName={`Laundromat`}
             height={`40px`}
@@ -134,7 +134,7 @@ const Laundromat = () => {
         </div>
       </div>
 
-      <button className="hidden lg:text-blue-500 lg:bg-white lg:rounded-full lg:px-8 lg:py-4 lg:mx-auto lg:flex lg:items-center lg:justify-center lg:text-xl lg:border-2 lg:border-white lg:mt-20 lg:font-semibold lg:capitalize lg:hover:text-white lg:hover:bg-blue-500 lg:hover:border-blue-500 transition-all duration-300 lg:mb-20">
+      <button className="hidden lg:text-black lg:bg-white lg:rounded-full lg:px-8 lg:py-4 lg:mx-auto lg:flex lg:items-center lg:justify-center lg:text-xl lg:border-2 lg:border-white lg:mt-20 lg:font-semibold lg:capitalize lg:hover:text-white lg:hover:bg-black lg:hover:border-black transition-all duration-300 lg:mb-20">
         Book Now
       </button>
     </div>

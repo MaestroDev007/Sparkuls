@@ -65,7 +65,7 @@ const DryClean = () => {
           </div>
         </div>
 
-        <p className="pl-2 opacity-80 mt-8  sm:px-[10%] md:px-[15%] md:text-xl lg:hidden ">
+        <p className="pl-2 opacity-80 mt-8   sm:px-[10%] md:px-[15%] md:text-xl lg:hidden ">
           Convenient pickup and delivery to save you time. High-quality cleaning
           to keep you looking your best.
         </p>
@@ -98,7 +98,7 @@ const DryClean = () => {
         </div>
 
         <div className="px-4  mt-12 sm:mx-12 md:px-12 md:mt-20 lg:flex lg:gap-16 lg:items-center lg:mx-auto lg:justify-center lg:mt-24 xl:mt-32 xl:px-[5%]">
-          <div className="shadow-md rounded-xl p-4 border-2 lg:p-6 lg:border-2 lg:h-[250px] lg:w-2/5 xl:w-[30%] xl:h-[250px] lg:transform lg:transition-transform lg:duration-500  lg:hover:scale-105 ">
+          <div className="shadow-md rounded-xl p-4 backdrop-blur-sm bg-white/10 border-2 lg:p-6 lg:border-2 lg:h-[250px] lg:w-2/5 xl:w-[30%] xl:h-[250px] lg:transform lg:transition-transform lg:duration-500  lg:hover:scale-105 lg:bg-white/5 lg:backdrop-blur-md lg:hover:bg-white/10">
             <h3 className="font-semibold capitalize  text-xl md:text-3xl">
               Your clothes tracked
             </h3>
@@ -108,7 +108,7 @@ const DryClean = () => {
               photo and itemized inventory of everything being cleaned
             </p>
           </div>
-          <div className="hidden lg:block lg:shadow-md lg:rounded-xl lg:p-6 lg:border-2 lg:h-[240px] lg:w-2/5 xl:w-[30%] xl:h-[250px] transform transition-transform lg:duration-500  lg:hover:scale-105">
+          <div className="hidden lg:block lg:shadow-md lg:rounded-xl lg:p-6 lg:border-2 lg:h-[240px] lg:w-2/5 xl:w-[30%] xl:h-[250px] transform transition-transform lg:duration-500  lg:hover:scale-105 lg:bg-white/5 lg:backdrop-blur-md lg:hover:bg-white/10">
             <h3 className="font-semibold text-xl md:text-3xl">
               Expert Cleaning
             </h3>
@@ -119,7 +119,7 @@ const DryClean = () => {
             </p>
           </div>
 
-          <div className="mt-8 p-2 opacity-80 rounded-xl shadow-xl border md:mt-16 lg:hidden">
+          <div className="mt-8 p-2 opacity-80 rounded-xl shadow-xl border-2 md:mt-16 backdrop-blur-sm bg-white/10 lg:hidden">
             <p className=" mt-2 text-center md:text-2xl ">
               Standard 3-4 day turnaround for all orders
             </p>
@@ -130,7 +130,7 @@ const DryClean = () => {
                   <SVGIcon
                     iconName={`apparel`}
                     height={`30px`}
-                    fill={`gray`}
+                    fill={`#1D6076`}
                   />
                   <p>Shirts</p>
                 </div>
@@ -142,7 +142,7 @@ const DryClean = () => {
                   <SVGIcon
                     iconName={`apparel`}
                     height={`30px`}
-                    fill={`gray`}
+                    fill={`#1D6076`}
                   />
                   <p>Shorts</p>
                 </div>
@@ -154,7 +154,7 @@ const DryClean = () => {
                   <SVGIcon
                     iconName={`apparel`}
                     height={`30px`}
-                    fill={`gray`}
+                    fill={`#1D6076`}
                   />
                   <p>Sweater</p>
                 </div>
@@ -166,7 +166,7 @@ const DryClean = () => {
                   <SVGIcon
                     iconName={`apparel`}
                     height={`30px`}
-                    fill={`gray`}
+                    fill={`#1D6076`}
                   />
                   <p>Trousers</p>
                 </div>
@@ -178,7 +178,7 @@ const DryClean = () => {
                   <SVGIcon
                     iconName={`apparel`}
                     height={`30px`}
-                    fill={`gray`}
+                    fill={`#1D6076`}
                   />
                   <p>Casuals</p>
                 </div>
@@ -258,7 +258,7 @@ const DryClean = () => {
           </div>
         </div>
 
-        <button className="bg-primary mx-auto text-center flex items-center justify-center mt-12 p-4 rounded-xl text-white text-semibold md:mt-20 lg:text-xl ">
+        <button className="bg-white  mx-auto text-center flex items-center justify-center mt-12 p-4 rounded-xl text-black text-semibold md:mt-20 lg:text-xl lg:bg-white lg:mx-auto lg:text-center lg:py-2 lg:px-4 lg:rounded-xl lg:text-black lg:text-semibold  lg:mt-20 lg:block lg:hover:text-secondary ">
           Schedule A Dry Cleaning Pick-Up
         </button>
       </div>

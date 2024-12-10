@@ -14,7 +14,7 @@ const WashFold = () => {
       zIndex: -1, // Make sure it stays behind the content
     }}
   ></div>
-      <div className="px-10 mt-10 lg:flex lg:mx-auto lg:px-16 lg:mt-20 xl:px-[7%]">
+      <div className="px-10 pt-8 mt-10 lg:flex lg:mx-auto lg:px-16 lg:mt-20 xl:px-[7%]">
         <div className="lg:w-[40%] lg:flex lg:flex-col lg:pt-28">
           <h2 className="sticky text-3xl  text-center font-semibold sm:text-4xl md:text-5xl lg:text-5xl lg:text-left xl:text-6xl">
             Wash & Fold
@@ -91,7 +91,7 @@ const WashFold = () => {
           </div>
 
           <div className="px-4 mt-8 sm:px-12 md:px-24 md:mt-20 lg:hidden">
-            <div className="shadow-xl rounded-xl p-4 border">
+            <div className="shadow-xl rounded-xl p-4 border backdrop-blur-sm bg-white/10">
               <h3 className="font-semibold text-2xl md:text-3xl ">
                 Pay-As-You-Go
               </h3>
@@ -114,14 +114,14 @@ const WashFold = () => {
             </div>
           </div>
 
-          <button className="bg-primary mx-auto text-center flex items-center justify-center mt-12 p-4 rounded-xl text-white text-semibold md:mt-20 lg:hidden">
+          <button className="bg-white  mx-auto text-center flex items-center justify-center mt-12 p-4 rounded-xl text-black text-semibold md:mt-20 lg:hidden">
             Schedule A Wash & Fold Pick-Up
           </button>
         </div>
       </div>
 
       <div className=" hidden lg:flex lg:gap-8 lg:items-center lg:mx-auto lg:justify-center lg:mt-20 xl:mt-32 xl:px-[5%]">
-        <div className="shadow-xl rounded-xl p-6 border h-[200px] w-2/5 xl:w-[30%] xl:h-[250px] transform transition-transform duration-500  hover:scale-105">
+        <div className="shadow-xl rounded-xl p-6 border-2 h-[200px] w-2/5 xl:w-[30%] xl:h-[250px] transform transition-transform duration-500  hover:scale-105 bg-white/5 backdrop-blur-md hover:bg-white/10">
           <h3 className="font-semibold text-3xl ">Pay-As-You-Go</h3>
           <p className="mt-4 text-base">
             Our Dry Clean Service priced per cloth.
@@ -131,14 +131,14 @@ const WashFold = () => {
           <p>Standard 3-4 day turnaround.</p>
         </div>
 
-        <div className="xl:shadow-xl xl:rounded-xl xl:p-6 xl:border h-[200px]  w-2/5 xl:w-[30%] xl:h-[250px] transform transition-transform duration-500  hover:scale-105 hidden xl:block">
+        <div className="xl:shadow-xl xl:rounded-xl xl:p-6 xl:border-2 xl:border-secondary h-[200px]  w-2/5 xl:w-[30%] xl:h-[250px] transform transition-transform duration-500  hover:scale-105 hidden xl:bg-white/5 xl:backdrop-blur-md xl:block xl:hover:bg-white/10">
           <h3 className="font-semibold text-3xl  ">Iron & Fold</h3>
 
           <p className="mt-4 opacity-85 text-base ">
           Press your clean clothes after your wash into a well folded piece of clothe.
           </p>
         </div>
-        <div className="shadow-xl rounded-xl p-6 border h-[200px]  w-2/5 xl:w-[30%] xl:h-[250px] transform transition-transform duration-500  hover:scale-105">
+        <div className="shadow-xl rounded-xl p-6 border-2 h-[200px]  w-2/5 xl:w-[30%] xl:h-[250px] transform transition-transform duration-500  hover:scale-105 bg-white/5 backdrop-blur-md hover:bg-white/10">
           <h3 className="font-semibold text-3xl  ">Schedule A Pick-Up</h3>
 
           <p className="mt-4 opacity-85 text-base ">
@@ -149,7 +149,7 @@ const WashFold = () => {
         </div>
       </div>
 
-      <button className="hidden lg:bg-primary lg:mx-auto lg:text-center lg:py-2 lg:px-4 lg:rounded-xl lg:text-white lg:text-semibold lg:text-xl lg:mt-20 lg:block">
+      <button className="hidden lg:bg-white lg:mx-auto lg:text-center lg:py-2 lg:px-4 lg:rounded-xl lg:text-black lg:text-semibold lg:text-xl lg:mt-20 lg:block lg:hover:text-secondary  ">
         Schedule A Wash & Fold Pick-Up
       </button>
 
