@@ -60,14 +60,14 @@ const Header = () => {
             {isOpen ? (
               <SVGIcon
                 iconName={`menuOpen`}
-                height={`34px`}
+                height={`40px`}
                 fill={`${`#E78812`}`}
                 className=" "
               />
             ) : (
               <SVGIcon
                 iconName={`menu`}
-                height={`34px`}
+                height={`40px`}
                 fill={`${`#E78812`}`}
                 className=" "
               />
@@ -91,7 +91,7 @@ const Header = () => {
             <button onClick={handleClose}>
               <SVGIcon
                 iconName={`menuOpen`}
-                height={`34px`}
+                height={`40px`}
                 fill={`${`#E78812`}`}
                 className=" "
               />
@@ -112,10 +112,10 @@ const Header = () => {
                 <li key={item.id}>
                   <NavLink
                     to={`/`}
-                    className={`flex items-center  text-base gap-4 rounded-md duration-300  text-white  px-1 md:cursor-pointer  w-full `}>
+                    className={`flex items-center  text-xl gap-4 rounded-md duration-300  text-white  px-1 md:cursor-pointer  w-full `}>
                     <SVGIcon
                       iconName={item.iconName}
-                      height={`30px`}
+                      height={`40px`}
                       fill={`${`#E78812`}`}
                       className="min-w-max"
                     />
