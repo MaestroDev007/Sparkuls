@@ -45,7 +45,7 @@ const Header = () => {
   // };
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50 lg:hidden">
+    <header className="absolute h-screen top-0 left-0 w-full z-50 lg:hidden">
       <div className="flex items-center justify-between">
         <figure>
           <img />
