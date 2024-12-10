@@ -5,8 +5,8 @@ import SVGIcon from "../../Config/SVGIcon";
 const DryClean = () => {
   return (
     <section>
-      <div className="pl-16 mt-10 lg:mt-20  lg:mx-auto lg:px-16 xl:px-[7%]">
-        <div className="flex">
+      <div className="px-10 mt-10 lg:mt-20  lg:mx-auto lg:px-16 xl:px-[7%]">
+        <div className="flex flex-col lg:flex-row">
           <div className="lg:w-[40%] lg:flex lg:flex-col lg:pt-28">
             <h2 className="sticky text-3xl  text-center font-semibold sm:text-4xl md:text-5xl lg:text-5xl lg:text-left xl:text-6xl ">
               {" "}

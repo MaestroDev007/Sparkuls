@@ -14,7 +14,7 @@ const WashFold = () => {
       zIndex: -1, // Make sure it stays behind the content
     }}
   ></div>
-      <div className=" pl-16 pr-0 mt-10 lg:flex lg:mx-auto lg:px-16 lg:mt-20 xl:px-[7%]">
+      <div className="px-10 mt-10 lg:flex lg:mx-auto lg:px-16 lg:mt-20 xl:px-[7%]">
         <div className="lg:w-[40%] lg:flex lg:flex-col lg:pt-28">
           <h2 className="sticky text-3xl  text-center font-semibold sm:text-4xl md:text-5xl lg:text-5xl lg:text-left xl:text-6xl">
             Wash & Fold
@@ -39,7 +39,7 @@ const WashFold = () => {
                 // height={`30px`}
                 className="fill-secondary h-[20px]"
               />
-              <p className="text-xs">Iron & Fold</p>
+              <p className="text-xs ">Iron & Fold</p>
             </div>
             <div className="border-2 font-semibold border-secondary text-secondary items-center flex flex-col px-2 py-1 rounded-xl">
               <SVGIcon
@@ -70,7 +70,7 @@ const WashFold = () => {
                 // height={`30px`}
                 className="fill-secondary h-[30px]"
               />
-              <p className="text-sm">Cleaning</p>
+              <p className="text-xs text-nowrap">Cleaning</p>
             </div>
             <div className="border-2 font-semibold border-secondary text-secondary items-center flex flex-col gap-1 px-4 py-2 rounded-xl ">
               <SVGIcon
@@ -78,7 +78,7 @@ const WashFold = () => {
                 // height={`30px`}
                 className="fill-secondary h-[30px]"
               />
-              <p className="text-sm  ">Iron & Fold</p>
+              <p className="text- text-nowrap  ">Iron & Fold</p>
             </div>
             <div className="border-2 font-semibold border-secondary text-secondary items-center flex flex-col gap-1 px-4 py-2 rounded-xl">
               <SVGIcon
@@ -86,7 +86,7 @@ const WashFold = () => {
                 // height={`30px`}
                 className="fill-secondary h-[30px]"
               />
-              <p className="text-sm">Pick Up</p>
+              <p className="text-xs text-nowrap">Pick Up</p>
             </div>
           </div>
 

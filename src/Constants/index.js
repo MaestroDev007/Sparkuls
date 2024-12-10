@@ -19,11 +19,11 @@ export const Nav = [
     title: "Pick Up",
     iconName: "Schedule",
   },
-  {
-    id: 4,
-    title: "Janitor",
-    iconName: "Janitor",
-  },
+  // {
+  //   id: 4,
+  //   title: "Janitor",
+  //   iconName: "Janitor",
+  // },
   {
     id: 5,
     title: "Contact Us",

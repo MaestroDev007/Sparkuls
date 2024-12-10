@@ -11,10 +11,6 @@ import WhyUs from "./Component/Main/WhyUs";
 function App() {
   return (
     <>
-      <header>
-        <SideBar />
-      </header>
-
       <main>
         <Hero />
        

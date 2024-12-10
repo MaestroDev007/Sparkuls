@@ -17,9 +17,11 @@ const Hero = () => {
         className="absolute top-0 h-full w-full object-cover"
       />
       <div className="bg-black flex flex-col absolute top-0 opacity-50   left-0 size-full"></div>
-
+     
+        <SideBar  />
+    
       {/* Visible Nav only on large screens */}
-      <div className="hidden lg:flex lg:items-center  lg:justify-between lg:text-white lg:top-0 lg:absolute lg:left-0 lg:w-full lg:pl-24 xl:pt-6 ">
+      <div className="hidden lg:flex lg:items-center  lg:justify-between lg:text-white lg:top-0 lg:absolute lg:left-0 lg:w-full lg:pl-24 lg:pt-6 ">
         {/* <figure></figure> */}
 
         <div className="flex justify-between items-center pr-20 w-full">
@@ -39,7 +41,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="absolute size-full top-0 text-white flex flex-col items-center justify-center text-center pl-16  pt-40 pb-20  lg:text-left lg:pt-6 lg:pl-0 lg:mt-20 ">
+      <div className="absolute size-full top-0 text-white flex flex-col items-center justify-center text-center  pt-32 pb-20  lg:text-left lg:pt-6 lg:pl-0 lg:mt-20 ">
         <h1 className="text-4xl  font-bold px-8 md:text-3xl lg:text-7xl lg:leading-[5rem] lg:px-24 xl:text-[5rem]  xl:pr-80">
           <span>Laundry</span> Service At Your{" "}
           <span className="text-primary">Convenience</span>
@@ -78,7 +80,7 @@ const Hero = () => {
         </div>
 
         {/* Google Review */}
-        <div className="lg:flex lg:justify-start lg:w-full lg:ml-48">
+        <div className="lg:flex lg:justify-start lg:w-full lg:ml-52">
           <div className="bg-white/20 backdrop-blur-md gap-4 flex items-center mt-10 p-2 ">
             <p className="text-5xl text-primary">G</p>
             <div className="flex flex-col gap-2">
