@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { Nav } from "../../Constants/index.js";
 
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -48,7 +49,7 @@ const Header = () => {
     <header className="absolute h-screen top-0 left-0 w-full z-50 lg:hidden">
       <div className="flex items-center justify-between">
         <figure>
-          <img />
+          <img  src={logo} />
         </figure>
 
         <div className="mt-4 mr-4">
@@ -61,14 +62,14 @@ const Header = () => {
               <SVGIcon
                 iconName={`menuOpen`}
                 height={`40px`}
-                fill={`${`#E78812`}`}
+                fill={`${`white`}`}
                 className=" "
               />
             ) : (
               <SVGIcon
                 iconName={`menu`}
                 height={`40px`}
-                fill={`${`#E78812`}`}
+                fill={`${`white`}`}
                 className=" "
               />
             )}
@@ -80,7 +81,7 @@ const Header = () => {
         <div
           // variants={sideBarAnimation}
           // animate={isOpen ? "open" : "closed"}
-          className={`shadow-xl w-[300px] h-screen fixed top-0 right-0 z-50 bg-[#001442] text-white transition-transform p-2 duration-300 transform ${
+          className={`shadow-xl w-[300px] h-screen fixed top-0 right-0 z-50 bg-black text-white transition-transform p-2 duration-300 transform ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}>
           {" "}
@@ -92,11 +93,10 @@ const Header = () => {
               <SVGIcon
                 iconName={`menuOpen`}
                 height={`40px`}
-                fill={`${`#E78812`}`}
+                fill={`${`white`}`}
                 className=" "
               />
             </button>
-            <span>Sparkuls</span>
 
             <p
               className={`absolute bottom-1 text-xs ${

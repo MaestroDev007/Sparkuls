@@ -63,7 +63,7 @@ const WashFold = () => {
           <p className="mt-8 pl-4 sm:px-[10%] md:text-xl md:px-[15%] lg:hidden ">
             The most effortless way to handle your everyday laundry needs.
           </p>
-          <div className="flex items-center justify-evenly mt-8 gap-4 mx-4 text-xs sm:text-sm md:text-base md:mt-20 lg:hidden">
+          <div className="flex items-center justify-center mt-8 gap-4 mx-4 text-xs sm:text-sm md:text-base md:mt-20 lg:hidden">
             <div className="border-2 font-semibold border-secondary text-secondary items-center flex flex-col gap-1 px-4 py-2 rounded-xl">
               <SVGIcon
                 iconName={`dryClean`}

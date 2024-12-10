@@ -17,9 +17,9 @@ const Hero = () => {
         className="absolute top-0 h-full w-full object-cover"
       />
       <div className="bg-black flex flex-col absolute top-0 opacity-50   left-0 size-full"></div>
-     
-        <SideBar  />
-    
+
+      <SideBar />
+
       {/* Visible Nav only on large screens */}
       <div className="hidden lg:flex lg:items-center  lg:justify-between lg:text-white lg:top-0 lg:absolute lg:left-0 lg:w-full lg:pl-24 lg:pt-6 ">
         {/* <figure></figure> */}
@@ -28,13 +28,16 @@ const Hero = () => {
           <nav>
             <ul className="flex justify-evenly items-center gap-8 xl:gap-12">
               {Nav.map((item) => (
-                <li  className=" NavLink underlined"
-                 key={item.id}>{item.title}</li>
+                <li
+                  className=" NavLink underlined "
+                  key={item.id}>
+                  {item.title}
+                </li>
               ))}
             </ul>
           </nav>
 
-          <button className="border-primary hover:animate-pulse border rounded-md bg-primary px-4 py-2 text-white font-semibold xl:px-8 xl:py-4">
+          <button className="border-white border-2 hover:animate-pulse rounded-md px-4 py-2 text-black bg-white font-semibold xl:px-8 xl:py-4">
             Start A Request
           </button>
         </div>
@@ -44,7 +47,7 @@ const Hero = () => {
       <div className="absolute size-full top-0 text-white flex flex-col items-center justify-center text-center  pt-32 pb-20  lg:text-left lg:pt-6 lg:pl-0 lg:mt-20 ">
         <h1 className="text-4xl  font-bold px-8 md:text-3xl lg:text-7xl lg:leading-[5rem] lg:px-24 xl:text-[5rem]  xl:pr-80">
           <span>Laundry</span> Service At Your{" "}
-          <span className="text-primary">Convenience</span>
+          <span className="">Convenience</span>
         </h1>
         <p className="mt-8 px-[15%] font-semibold lg:text-left lg:text-xl lg:px-24 lg:pr-[25rem] xl:pr-[50rem]">
           Fast pickups, expert cleaning, Reliable Service, and seamless delivery
@@ -69,7 +72,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <button className="border-2 rounded-full border-primary bg-primary">
+            <button className="border-2 rounded-full border-white bg-black">
               <SVGIcon
                 iconName={`rightArrow`}
                 height={`50px`}
@@ -82,7 +85,7 @@ const Hero = () => {
         {/* Google Review */}
         <div className="lg:flex lg:justify-start lg:w-full lg:ml-52">
           <div className="bg-white/20 backdrop-blur-md gap-4 flex items-center mt-10 p-2 ">
-            <p className="text-5xl text-primary">G</p>
+            <p className="text-5xl text-white">G</p>
             <div className="flex flex-col gap-2">
               <div className="flex">
                 {Array.from({ length: 5 }).map((_, index) => (
@@ -90,7 +93,7 @@ const Hero = () => {
                     key={index}
                     iconName="arrow" // Example: passing props to the SVG component
                     height="30px"
-                    fill="gold"
+                    fill="lack"
                   />
                 ))}
               </div>

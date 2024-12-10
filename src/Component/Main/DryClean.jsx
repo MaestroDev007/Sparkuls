@@ -70,28 +70,28 @@ const DryClean = () => {
           to keep you looking your best.
         </p>
 
-        <div className="flex items-center justify-evenly mt-8 gap-4 mx-4 text-xs sm:text-sm md:text-base md:mt-20 lg:hidden">
-          <div className="border-2 font-semibold border-secondary text-secondary items-center flex flex-col gap-1 px-4 py-2 rounded-xl lg:gap-4 ">
+        <div className="flex items-center justify-center mt-8 gap-4 mx-4 text-xs sm:text-sm md:text-base md:mt-20 lg:hidden">
+          <div className="border-2 font-semibold border-secondary text-secondary items-center flex flex-col gap-1 px-4 py-2 rounded-xl text-nowrap">
             <SVGIcon
               iconName={`tracking`}
               // height={`30px`}
-              className="fill-secondary h-[30px] lg:h-[50px]"
+              className="fill-secondary h-[24px]"
             />
             <p>Tracking</p>
           </div>
-          <div className="border-2 font-semibold border-secondary text-secondary items-center flex flex-col gap-1 px-4 py-2 rounded-xl lg:gap-4 ">
+          <div className="border-2 font-semibold border-secondary text-secondary items-center flex flex-col gap-1 px-4 py-2 rounded-xl text-nowrap">
             <SVGIcon
               iconName={`laundry`}
               // height={`30px`}
-              className="fill-secondary h-[30px] lg:h-[50px]"
+              className="fill-secondary h-[24px]"
             />
             <p>Dry Clean</p>
           </div>
-          <div className="border-2 font-semibold border-secondary text-secondary items-center flex flex-col gap-1 px-4 py-2 rounded-xl lg:gap-4 ">
+          <div className="border-2 font-semibold border-secondary text-secondary items-center flex flex-col gap-1 px-4 py-2 rounded-xl text-nowrap">
             <SVGIcon
               iconName={`Schedule`}
               // height={`30px`}
-              className="fill-secondary h-[30px] lg:h-[50px]"
+              className="fill-secondary h-[24px]"
             />
             <p>Pick Up</p>
           </div>

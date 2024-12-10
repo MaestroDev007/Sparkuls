@@ -4,11 +4,11 @@ import logo from "../../Images/SPARKULS-removebg-preview.png"
 const Footer = () => {
   return (
     <footer className=" text-white px-10  ">
-      <figure className="w-[300px] h-[100px]">
+      <figure className="w-[150px] md:w-[300px] h-[100px]">
         <img src={logo} />
       </figure>
 
-      <p className="pl-4 opacity-80 mt-16 text-xs leading-[1.25rem] text-left lg:w-[60%]  lg:text-base">
+      <p className="pl-4 opacity-80  md:mt-16 text-xs leading-[1.25rem] text-left lg:w-[60%]  lg:text-base">
         Sparkuls offers you Modern, efficient laundry solutions in a vibrant
         space, blending convenience with customer perks for a superior washing
         and drying experience.
