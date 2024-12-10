@@ -1,10 +1,20 @@
 import React from "react";
 import img from "../../Images/dry-cleaning.sha256-e2b77df2fa9697fe4a4a0d9462be36e32c570a3794b876e64faeaa987ddde998.webp";
 import SVGIcon from "../../Config/SVGIcon";
+import img2 from "../../Images/rb_41350.png"
 
 const DryClean = () => {
   return (
-    <section>
+    <section className="relative bg-opacity-20 ">
+
+<div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat "
+    style={{
+      backgroundImage: `url(${img2})`,
+      opacity: 0.1, // Adjust the opacity as needed
+      zIndex: -1, // Make sure it stays behind the content
+    }}
+  ></div>
       <div className="px-10 mt-10 lg:mt-20  lg:mx-auto lg:px-16 xl:px-[7%]">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-[40%] lg:flex lg:flex-col lg:pt-28">

@@ -80,7 +80,7 @@ const Header = () => {
         <div
           // variants={sideBarAnimation}
           // animate={isOpen ? "open" : "closed"}
-          className={`shadow-xl w-7/12 h-screen fixed top-0 right-0 z-50 bg-[#001442] text-white transition-transform p-2 duration-300 transform ${
+          className={`shadow-xl w-[300px] h-screen fixed top-0 right-0 z-50 bg-[#001442] text-white transition-transform p-2 duration-300 transform ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}>
           {" "}

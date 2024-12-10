@@ -2,10 +2,20 @@ import React from "react";
 import img from "../../Images/pexels-gratisography-4414.jpg";
 import img2 from "../../Images/pexels-tima-miroshnichenko-8774568.jpg";
 import SVGIcon from "../../Config/SVGIcon";
+// lg:bg-[#1B75BC]
 const Laundromat = () => {
   return (
-    <section
-      className={`px-10 mt-10 md:mt-24 lg:flex lg:mx-auto lg:px-16 lg:mt-20 xl:px-[7%] lg:flex-col lg:bg-[#1B75BC] lg:text-white`}>
+    <section className="relative"> 
+    <div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat "
+    style={{
+      backgroundImage: `url(${img2})`,
+      opacity: 0.8, // Adjust the opacity as needed
+      zIndex: -1, // Make sure it stays behind the content
+    }}
+  ></div>
+    <div
+      className={`px-10 mt-10 md:mt-24 lg:flex lg:mx-auto lg:px-16 lg:mt-20 xl:px-[7%] lg:flex-col lg:text-white`}>
       <div className="flex items-center px-8 lg:px-40 lg:flex lg:items-center lg:justify-center lg:-translate-y-8">
         <div className="flex-grow border-t border-gray-400"></div>
         <span className="mx-4 text-gray-600">Laundromat</span>
@@ -17,13 +27,13 @@ const Laundromat = () => {
         Do Your Laundry Yourself ?{" "}
       </h2>
 
-      <p className="hidden lg:block lg:text-center lg:mt-8 lg:px-20 ">
+      <p className="hidden lg:block lg:text-center lg:mt-8 lg:px-28 ">
         Sparkuls Laundromat provides top-tier commercial laundry equipment
         within a calm and engaging environment, turning laundry into an
         enjoyable activity.{" "}
       </p>
 
-      <div className="hidden lg:flex lg:items-center lg:mt-20 lg:mx-auto lg:gap-8 lg:flex-1">
+      <div className="hidden lg:flex lg:items-center lg:mt-32 lg:mx-auto lg:gap-8 lg:flex-1">
           <div className="p-4 h-[300px] border shadow-md rounded-xl flex flex-col gap-4 bg-white text-blue-500 w-[30%] text-center xl:h-[250px] transform transition-transform duration-500 hover:-rotate-1 hover:scale-105">
             <div className="flex justify-center items-center">
               <SVGIcon
@@ -124,9 +134,10 @@ const Laundromat = () => {
         </div>
       </div>
 
-      <button className="hidden lg:text-blue-500 lg:bg-white lg:rounded-full lg:px-8 lg:py-4 lg:mx-auto lg:flex lg:items-center lg:justify-center lg:text-xl lg:border-2 lg:border-blue-500  lg:mt-20 lg:font-semibold lg:capitalize lg:hover:text-white lg:hover:bg-blue-500 transition-all duration-300 lg:mb-20">
+      <button className="hidden lg:text-blue-500 lg:bg-white lg:rounded-full lg:px-8 lg:py-4 lg:mx-auto lg:flex lg:items-center lg:justify-center lg:text-xl lg:border-2 lg:border-white lg:mt-20 lg:font-semibold lg:capitalize lg:hover:text-white lg:hover:bg-blue-500 lg:hover:border-blue-500 transition-all duration-300 lg:mb-20">
         Book Now
       </button>
+    </div>
     </section>
   );
 };
