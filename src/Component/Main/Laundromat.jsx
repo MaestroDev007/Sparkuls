@@ -18,7 +18,7 @@ const Laundromat = () => {
       className={`px-10 pt-8 mt-10 md:mt-24 lg:flex lg:mx-auto lg:px-16 lg:mt-20 xl:px-[7%] lg:flex-col lg:text-white`}>
       <div className="flex items-center px-8 lg:px-40 lg:flex lg:items-center lg:justify-center lg:-translate-y-8 xl:-translate-y-16">
         <div className="flex-grow border-t border-gray-400"></div>
-        <span className="mx-4 text-gray-600 ">Laundromat</span>
+        <span className="mx-4 text-white ">Laundromat</span>
         <div className="flex-grow border-t border-gray-400"></div>
       </div>
 
@@ -39,7 +39,7 @@ const Laundromat = () => {
               <SVGIcon
                 iconName={`Laundromat`}
                 height={`40px`}
-                className="fill-blue-500"
+                className="fill-black"
               />
             </div>
             <div className="flex flex-col gap-2 ">
@@ -57,7 +57,7 @@ const Laundromat = () => {
               <SVGIcon
                 iconName={`time`}
                 height={`40px`}
-                className="fill-blue-500"
+                className="fill-black"
               />
             </div>
             <div className="flex flex-col gap-2 ">
@@ -75,7 +75,7 @@ const Laundromat = () => {
               <SVGIcon
                 iconName={`chill`}
                 height={`40px`}
-                className="fill-blue-500"
+                className="fill-black"
               />
             </div>
             <div className="flex flex-col gap-2 ">
@@ -107,7 +107,7 @@ const Laundromat = () => {
           <SVGIcon
             iconName={`Laundromat`}
             height={`40px`}
-            className="fill-secondary
+            className="fill-black
           "/>
           <h4 className="text-sm sm:text-base mt-2 md:text-xl">
             Self Wash & Dry
@@ -123,7 +123,7 @@ const Laundromat = () => {
           <SVGIcon
             iconName={`chill`}
             height={`40px`}
-            className="fill-secondary"
+            className="fill-black"
           />
           <h4 className="text-sm sm:text-base mt-2 md:text-xl">Chill</h4>
 

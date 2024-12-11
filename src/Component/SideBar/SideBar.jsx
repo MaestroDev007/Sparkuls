@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import SVGIcon from "../../Config/SVGIcon";
-import logo from "../../Images/preview.jpg";
+import logo from "../../Images/SPARKULS-removebg-preview.png"
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { Nav } from "../../Constants/index.js";
@@ -47,12 +47,13 @@ const Header = () => {
 
   return (
     <header className="absolute h-screen top-0 left-0 w-full z-50 lg:hidden">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mx-4">
         <figure>
-          <img  src={logo} />
+          <img  src={logo} 
+          className="w-[100px] md:w-[150px]" />
         </figure>
 
-        <div className="mt-4 mr-4">
+        <div className="mt-4">
           <button
             className={`cursor-pointer  items-center flex justify-center  ${
               isOpen ? "p-1" : "p-[.1rem]"

@@ -4,6 +4,8 @@ import heroVideo from "../../Videos/Rinse - Laundry and Dry Cleaning Delivery Se
 import { SvgIcon } from "@mui/material";
 import SVGIcon from "../../Config/SVGIcon";
 import { Nav } from "../../Constants/index.js";
+import logo from "../../Images/SPARKULS-removebg-preview.png";
+import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -21,17 +23,24 @@ const Hero = () => {
       <SideBar />
 
       {/* Visible Nav only on large screens */}
-      <div className="hidden lg:flex lg:items-center  lg:justify-between lg:text-white lg:top-0 lg:absolute lg:left-0 lg:w-full lg:pl-24 lg:pt-6 ">
-        {/* <figure></figure> */}
+      <div className="hidden lg:flex lg:items-center  lg:justify-between lg:text-white lg:top-0 lg:absolute lg:left-0 lg:w-full lg:pl-24  ">
+        <figure>
+          <NavLink>
+            <img
+              src={logo}
+              className="w-[250px] h-[100px] -translate-x-8"
+            />
+          </NavLink>
+        </figure>
 
         <div className="flex justify-between items-center pr-20 w-full">
-          <nav>
+          <nav className="translate-x-16">
             <ul className="flex justify-evenly items-center gap-8 xl:gap-12">
               {Nav.map((item) => (
                 <li
                   className=" NavLink underlined "
                   key={item.id}>
-                  {item.title}
+                  <NavLink>{item.title}</NavLink>
                 </li>
               ))}
             </ul>
@@ -44,7 +53,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="absolute size-full top-0 text-white flex flex-col items-center justify-center text-center  pt-32 pb-20  lg:text-left lg:pt-6 lg:pl-0 lg:mt-20 ">
+      <div className="absolute size-full top-0 text-white flex flex-col items-center justify-center text-center  pt-32 pb-20  lg:text-left lg:pt-6 lg:pl-0 lg:mt-24 ">
         <h1 className="text-4xl  font-bold px-8 md:text-3xl lg:text-7xl lg:leading-[5rem] lg:px-24 xl:text-[5rem]  xl:pr-80">
           <span>Laundry</span> Service At Your{" "}
           <span className="">Convenience</span>
