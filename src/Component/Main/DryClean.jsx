@@ -5,7 +5,7 @@ import img2 from "../../Images/rb_41350.png"
 
 const DryClean = () => {
   return (
-    <section className="relative bg-opacity-20 ">
+    <section className="relative bg-opacity-20 font-sansita ">
 
 <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat "
@@ -99,7 +99,7 @@ const DryClean = () => {
 
         <div className="px-4  mt-12 sm:mx-12 md:px-12 md:mt-20 lg:flex lg:gap-16 lg:items-center lg:mx-auto lg:justify-center lg:mt-24 xl:mt-32 xl:px-[5%]">
           <div className="shadow-md rounded-xl p-4 backdrop-blur-sm bg-white/10 border-2 lg:p-6 lg:border-2 lg:h-[250px] lg:w-2/5 xl:w-[30%] xl:h-[250px] lg:transform lg:transition-transform lg:duration-500  lg:hover:scale-105 lg:bg-white/5 lg:backdrop-blur-md lg:hover:bg-white/10">
-            <h3 className="font-semibold capitalize  text-xl md:text-3xl">
+            <h3 className="font-semibold capitalize text-nowrap text-center  text-xl md:text-3xl">
               Your clothes tracked
             </h3>
 

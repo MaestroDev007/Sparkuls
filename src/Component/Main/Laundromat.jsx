@@ -27,7 +27,7 @@ const Laundromat = () => {
         Do Your Laundry Yourself ?{" "}
       </h2>
 
-      <p className="hidden lg:block lg:text-center lg:mt-8 lg:px-28 ">
+      <p className="hidden lg:block lg:text-center lg:mt-8 lg:px-40 ">
         Sparkuls Laundromat provides top-tier commercial laundry equipment
         within a calm and engaging environment, turning laundry into an
         enjoyable activity.{" "}

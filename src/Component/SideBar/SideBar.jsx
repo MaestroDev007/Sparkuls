@@ -113,12 +113,12 @@ const Header = () => {
                 <li key={item.id}>
                   <NavLink
                     to={`/`}
-                    className={`flex items-center  text-xl gap-4 rounded-md duration-300  text-white  px-1 md:cursor-pointer  w-full `}>
+                    className={`flex items-center font-bold  text-xl gap-4 rounded-md duration-300  text-white  px-1 md:cursor-pointer  w-full `}>
                     <SVGIcon
                       iconName={item.iconName}
                       height={`40px`}
-                      fill={`${`#E78812`}`}
-                      className="min-w-max"
+                      // fill={`${`#E78812`}`}
+                      className="min-w-max fill-white/80"
                     />
                     {item.title}
                   </NavLink>

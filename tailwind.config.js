@@ -17,6 +17,7 @@ export default {
       },
       fontFamily: {
         pop: ["Poppins", "sans-serif"],
+        sansita: ["Sansita", "sans-serif"]
       },
     },
   },

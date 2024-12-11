@@ -54,7 +54,7 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="absolute size-full top-0 text-white flex flex-col items-center justify-center text-center  pt-32 pb-20  lg:text-left lg:pt-6 lg:pl-0 lg:mt-24 ">
-        <h1 className="text-4xl  font-bold px-8 md:text-3xl lg:text-7xl lg:leading-[5rem] lg:px-24 xl:text-[5rem]  xl:pr-80">
+        <h1 className="text-4xl  font-bold px-8 md:text-3xl lg:text-7xl lg:leading-[5rem] lg:px-24 xl:text-[5rem]  xl:pr-[30rem]">
           <span>Laundry</span> Service At Your{" "}
           <span className="">Convenience</span>
         </h1>
