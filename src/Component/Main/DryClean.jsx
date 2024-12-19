@@ -1,9 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import img from "../../Images/dry-cleaning.sha256-e2b77df2fa9697fe4a4a0d9462be36e32c570a3794b876e64faeaa987ddde998.webp";
 import SVGIcon from "../../Config/SVGIcon";
 import img2 from "../../Images/rb_41350.png"
+import WashFoldModal from "../../Config/WashFoldModal";
+
 
 const DryClean = () => {
+
+    const [showWashFoldModal, setShowWashFoldModal] = useState(false);
+  
+    const handleShowWashFoldModal = () => {
+   
+      setShowWashFoldModal((prev) => !prev);
+    };
+  
   return (
     <section className="relative bg-opacity-20 font-sansita ">
 
@@ -258,9 +268,14 @@ const DryClean = () => {
           </div>
         </div>
 
-        <button className="bg-white  mx-auto text-center flex items-center justify-center mt-12 p-4 rounded-xl text-black text-semibold md:mt-20 lg:text-xl lg:bg-white lg:mx-auto lg:text-center lg:py-2 lg:px-4 lg:rounded-xl lg:text-black lg:text-semibold  lg:mt-20 lg:block lg:hover:text-secondary ">
+        <button
+         onClick={handleShowWashFoldModal}
+         className="bg-white  mx-auto text-center flex items-center justify-center mt-12 p-4 rounded-xl text-black text-semibold md:mt-20 lg:text-xl lg:bg-white lg:mx-auto lg:text-center lg:py-2 lg:px-4 lg:rounded-xl lg:text-black lg:text-semibold  lg:mt-20 lg:block lg:hover:text-secondary ">
           Schedule A Dry Cleaning Pick-Up
         </button>
+        {showWashFoldModal && (
+        <WashFoldModal setShowWashFoldModal={setShowWashFoldModal} />
+      )}
       </div>
     </section>
   );

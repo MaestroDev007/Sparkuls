@@ -7,6 +7,7 @@ import Laundromat from "./Component/Main/Laundromat";
 import Footer from "./Component/Footer/Footer";
 import Janitorial from "./Component/Main/Janitorial"
 import WhyUs from "./Component/Main/WhyUs";
+import Modal from "./Config/Modal"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Laundromat />
         {/* <Janitorial /> */}
         {/* <WhyUs /> */}
+       
       </main>
 
       <footer>

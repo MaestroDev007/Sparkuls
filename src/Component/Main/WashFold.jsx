@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import img from "../../Images/wash-and-fold.sha256-8b3977f7df57ea560270bb2f5196358fbfb3cb2ab95bea6e58e475776ce94f59.webp";
 import SVGIcon from "../../Config/SVGIcon";
 import img2 from "../../Images/rb_42805.png";
+import WashFoldModal from "../../Config/WashFoldModal";
 const WashFold = () => {
+  const [showWashFoldModal, setShowWashFoldModal] = useState(false);
+
+  const handleShowWashFoldModal = () => {
+ 
+    setShowWashFoldModal((prev) => !prev);
+  };
+
+  
+
   return (
     <section className="relative bg-opacity-20 ">
       <div
@@ -112,9 +122,14 @@ const WashFold = () => {
             </div>
           </div>
 
-          <button className="bg-white  mx-auto text-center flex items-center justify-center mt-12 p-4 rounded-xl text-black text-semibold md:mt-20 lg:hidden">
+          <button 
+           onClick={handleShowWashFoldModal}
+          className="bg-white  mx-auto text-center flex items-center justify-center mt-12 p-4 rounded-xl text-black text-semibold md:mt-20 lg:hidden">
             Schedule A Wash & Fold Pick-Up
           </button>
+          {showWashFoldModal && (
+        <WashFoldModal setShowWashFoldModal={setShowWashFoldModal} />
+      )}
         </div>
       </div>
 
@@ -147,9 +162,15 @@ const WashFold = () => {
         </div>
       </div>
 
-      <button className="hidden lg:bg-white lg:mx-auto lg:text-center lg:py-2 lg:px-4 lg:rounded-xl lg:text-black lg:text-semibold lg:text-xl lg:mt-20 lg:block lg:hover:text-secondary  ">
+      <button
+      onClick={handleShowWashFoldModal}
+       className="hidden lg:bg-white lg:mx-auto lg:text-center lg:py-2 lg:px-4 lg:rounded-xl lg:text-black lg:text-semibold lg:text-xl lg:mt-20 lg:block lg:hover:text-secondary  ">
         Schedule A Wash & Fold Pick-Up
       </button>
+
+      {showWashFoldModal && (
+        <WashFoldModal setShowWashFoldModal={setShowWashFoldModal} />
+      )}
 
       <hr className="mt-8 text-black lg:mt-20"></hr>
     </section>

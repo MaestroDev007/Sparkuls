@@ -135,7 +135,8 @@ const Laundromat = () => {
       </div>
 
       <button className="hidden lg:text-black lg:bg-white lg:rounded-full lg:px-8 lg:py-4 lg:mx-auto lg:flex lg:items-center lg:justify-center lg:text-xl lg:border-2 lg:border-white lg:mt-20 lg:font-semibold lg:capitalize lg:hover:text-white lg:hover:bg-black lg:hover:border-black transition-all duration-300 lg:mb-20">
-        Book Now
+        Contact Us
+        
       </button>
     </div>
     </section>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SideBar from "../SideBar/SideBar";
 import heroVideo from "../../Videos/Rinse - Laundry and Dry Cleaning Delivery Service.mp4";
 import { SvgIcon } from "@mui/material";
@@ -6,8 +6,35 @@ import SVGIcon from "../../Config/SVGIcon";
 import { Nav } from "../../Constants/index.js";
 import logo from "../../Images/SPARKULS-removebg-preview.png";
 import { NavLink } from "react-router-dom";
+import Modal from "../../Config/Modal.jsx";
 
 const Hero = () => {
+  const [flag, setFlag] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const requestRef = useRef(null);
+  const handleShowModal = () => {
+    setShowModal((prev) => !prev);
+  };
+  const handleAnimation = () => {
+    setFlag((prev) => !prev);
+  };
+
+  const handleModal = () => {
+    setShowModal((prev) => !prev);
+  };
+
+  useEffect(() => {
+    flag
+      ? (() => {
+          requestRef.current.classList.add("animate-bounce");
+          setTimeout(() => {
+            requestRef.current.classList.remove("animate-bounce");
+            setFlag(false);
+          }, 1000); // Adjust timing to match your animation
+        })()
+      : null;
+  }, [flag]);
+
   return (
     <section className="h-screen relative w-full">
       {/* Video $$ related video styles */}
@@ -25,7 +52,7 @@ const Hero = () => {
       {/* Visible Nav only on large screens */}
       <div className="hidden lg:flex lg:items-center  lg:justify-between lg:text-white lg:top-0 lg:absolute lg:left-0 lg:w-full lg:pl-24  ">
         <figure>
-          <NavLink>
+          <NavLink to="/">
             <img
               src={logo}
               className="w-[250px] h-[100px] -translate-x-8"
@@ -46,9 +73,18 @@ const Hero = () => {
             </ul>
           </nav>
 
-          <button className="border-white border-2 hover:animate-pulse rounded-md px-4 py-2 text-black bg-white font-semibold xl:px-8 xl:py-4">
+          <button
+            className="border-white border-2 hover:animate-pulse rounded-md px-4 py-2 text-black bg-white font-semibold xl:px-8 xl:py-4"
+            ref={requestRef}
+            onClick={handleModal}>
             Start A Request
           </button>
+          {showModal && (
+            <Modal
+              setShowModal={setShowModal}
+              showModal={showModal}
+            />
+          )}
         </div>
       </div>
 
@@ -81,13 +117,24 @@ const Hero = () => {
               </div>
             </div>
 
-            <button className="border-2 rounded-full border-white bg-black">
+            <button
+              className="border-2 rounded-full border-white bg-black"
+              onClick={() => {
+                handleAnimation();
+                handleShowModal();
+              }}>
               <SVGIcon
                 iconName={`rightArrow`}
                 height={`50px`}
                 fill={`white`}
               />
             </button>
+            {showModal && (
+              <Modal
+                setShowModal={setShowModal}
+                showModal={showModal}
+              />
+            )}
           </div>
         </div>
 
