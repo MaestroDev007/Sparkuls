@@ -23,7 +23,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
   const onSubmit = (data) => {
     const Message = `Hello, My name is ${data.userName} from ${data.address}, requesting for a ${data.service}. \nHere is a description of my Laundry:`;
 
-    const phoneNumber = "+2348080468229";
+    const phoneNumber = "+2348061164856";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       Message
     )}`;
