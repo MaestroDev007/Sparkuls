@@ -3,27 +3,41 @@ import logo from ".././Images/SPARKULS-removebg-preview.png";
 import { useForm } from "react-hook-form";
 
 const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
-  const phoneRegex = /^(?:\+234|0)(7[0-9]|8[0-9]|9[0-9])[0-9]{7}$/;
+  const phoneRegex = /^(\+)?(234|0)[0-9]*?.*/;
 
   const handleClose = () => {
     setShowWashFoldModal((prev) => !prev);
   };
-  const WashFoldmodalRef = useRef();
+  const WashFoldModalRef = useRef();
 
   const closeModalRef = (e) => {
-    WashFoldmodalRef.current === e.target ? setShowWashFoldModal(false) : null;
+    WashFoldModalRef.current === e.target ? setShowWashFoldModal(false) : null;
   };
 
-  const { register } = useForm();
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      userName: "UserName",
+    },
+  });
+
+  const onSubmit = (data) => {
+    const Message = `Hello, My name is ${data.userName} from ${data.address}, requesting for a ${data.service}. \nHere is a description of my Laundry:`;
+
+    const phoneNumber = "+2348080468229";
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      Message
+    )}`;
+    window.open(whatsappURL, "_blank");
+  };
 
   return (
     <section
-      ref={WashFoldmodalRef}
+      ref={WashFoldModalRef}
       onClick={closeModalRef}
       className={`${
         showWashFold ? "hidden" : "flex"
       } fixed inset-0 flex-col items-center justify-center backdrop-blur-sm bg-white/10 text-center z-50 mx-auto`}>
-      <div className="bg-black text-black p-2 rounded-lg shadow-md w-[250px] md:w-[350px] md:h-[600px] relative">
+      <div className="bg-black text-black p-2 rounded-lg shadow-md w-[250px] md:w-[350px] md:h-[650px] relative">
         <figure>
           <img
             src={logo}
@@ -33,12 +47,17 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
         </figure>
         <p className="text-white text-xs mt-4">Kindly Fill Out The Fields</p>
         <fieldset className="text-white mt-4 md:mt-10">
-          <form className="flex flex-col items-center gap-4 text-sm w-full md:text-base md:items-start md:gap-10 md:px-4">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col items-center gap-4 text-sm w-full md:text-base md:items-start md:gap-10 md:px-4">
             {/* Service Selection */}
             <div className="flex flex-col gap-4 md:flex-row items-center">
               <label
                 htmlFor="Service"
-                className="block">
+                className="block"
+                {...register("service", {
+                  required: "Please select a service",
+                })}>
                 Service:
               </label>
               <select
@@ -59,7 +78,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
               </label>
               <input
                 type="text"
-                id="name"
+                id="userName"
                 {...register("userName", {
                   required: {
                     value: "true",
@@ -100,8 +119,8 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
               <input
                 type="text"
                 id="phone"
-                {...register("address", {
-                  required: "Please Fill In An Address", // This should be a string for the error message
+                {...register("phone", {
+                  required: "Please enter your phone number",
                   validate: (value) =>
                     phoneRegex.test(value) || "Invalid phone number",
                 })}
@@ -127,7 +146,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
             </div>
 
             {/* Terms of Service */}
-            <div className="mt-10 text-xs flex gap-2">
+            <div className="mt-4 text-xs flex gap-2">
               <input
                 type="checkbox"
                 name="terms"
@@ -139,6 +158,12 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
                 Terms Of Service
               </label>
             </div>
+            <button
+              type="submit"
+              onSubmit={handleSubmit(onSubmit)}
+              className="text-black bg-white py-2 px-8 font-semibold rounded-xl mx-auto flex items-center hover:">
+              Submit
+            </button>
           </form>
         </fieldset>
       </div>
