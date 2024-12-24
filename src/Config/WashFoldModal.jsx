@@ -20,23 +20,35 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
     //   userName: "UserName",
     // },
   });
+const sendToGmail = (data) =>
+{
+  const emailParams = {
+    firstName : data.firstName,
+    lastName : data.lastName,
+    address: data.address,
+    phone:data.phone,
+    service:data.service,
+    carriage:data.carriage
+  }
 
-  // emailjs
-  // .send(
-  //   "",
-  //   "",
-  //   emailParams,
-  //   ""
-  // )
-  // .then(
-  //   (response)=> {
-  //     alert("Email Sent Successfully");
-  //     reset()
-  //   },
-  //   (error) => {
-  //     alert("Failed to send Message")
-  //   }
-  // )
+
+}
+  emailjs
+  .send(
+    "service_jsraq5e",
+    "",
+    emailParams,
+    ""
+  )
+  .then(
+    (response)=> {
+      alert("Email Sent Successfully");
+      reset()
+    },
+    (error) => {
+      alert("Failed to send Message")
+    }
+  )
 
   const sendToWhatsapp = (data) => {
     const Message = `Hello, My name is ${data.userName} from ${data.address}, requesting for a ${data.service}. \nHere is a description of my Laundry:`;
@@ -46,6 +58,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
       Message
     )}`;
     window.open(whatsappURL, "_blank");
+    reset()
   };
 
   return (
@@ -104,7 +117,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
                   type="text"
                   id="userName"
                   placeholder="First Name"
-                  {...register("userName", {
+                  {...register("firstName", {
                     required: {
                       value: "true",
                       message: "Please Enter Full Name",
@@ -119,7 +132,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
                   type="text"
                   id="userName"
                   placeholder="Last Name"
-                  {...register("userName", {
+                  {...register("lastName", {
                     required: {
                       value: "true",
                       message: "Please Enter Full Name",
@@ -186,7 +199,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
             </div>
 
             {/* Terms of Service */}
-            <div className="mt-4 text-xs flex gap-2">
+            <div className="mt-4 text-xs flex gap-2 mx-4">
               <input
                 type="checkbox"
                 name="terms"
@@ -198,7 +211,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
                 Terms Of Service
               </label>
             </div>
-            <div className="flex gap-6">
+            <div className="flex gap-6 items-center justify-center my-4 md:my-0 md:-translate-y-[4.25rem] md:gap-12 md:translate-x-48 md:text-sm">
               <button
                 type="submit"
                 onSubmit={handleSubmit(sendToWhatsapp)}
