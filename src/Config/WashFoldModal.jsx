@@ -20,35 +20,36 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
     //   userName: "UserName",
     // },
   });
-const sendToGmail = (data) =>
-{
-  const emailParams = {
-    firstName : data.firstName,
-    lastName : data.lastName,
-    address: data.address,
-    phone:data.phone,
-    service:data.service,
-    carriage:data.carriage
-  }
+// const sendToGmail = (data) =>
+// {
+//   const emailParams = {
+//     firstName : data.firstName,n
+
+//     lastName : data.lastName,
+//     address: data.address,
+//     phone:data.phone,
+//     service:data.service,
+//     carriage:data.carriage
+//   }
 
 
-}
-  emailjs
-  .send(
-    "service_jsraq5e",
-    "",
-    emailParams,
-    ""
-  )
-  .then(
-    (response)=> {
-      alert("Email Sent Successfully");
-      reset()
-    },
-    (error) => {
-      alert("Failed to send Message")
-    }
-  )
+// }
+//   emailjs
+//   .send(
+//     "service_jsraq5e",
+//     "",
+//     emailParams,
+//     ""
+//   )
+//   .then(
+//     (response)=> {
+//       alert("Email Sent Successfully");
+//       reset()
+//     },
+//     (error) => {
+//       alert("Failed to send Message")
+//     }
+//   )
 
   const sendToWhatsapp = (data) => {
     const Message = `Hello, My name is ${data.userName} from ${data.address}, requesting for a ${data.service}. \nHere is a description of my Laundry:`;
