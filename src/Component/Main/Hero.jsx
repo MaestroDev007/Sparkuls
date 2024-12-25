@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import SideBar from "../SideBar/SideBar";
-import heroVideo from "../../Videos/Rinse - Laundry and Dry Cleaning Delivery Service.mp4";
+// import heroVideo from "../../Videos/sparkuls.mp4";
+import heroVideo from "../../Videos/sparkuls.webm"
 import { SvgIcon } from "@mui/material";
 import SVGIcon from "../../Config/SVGIcon";
 import { Nav } from "../../Constants/index.js";
@@ -43,7 +44,7 @@ const Hero = () => {
         loop
         muted
         autoPlay
-        className="absolute top-0 h-full w-full object-cover"
+        className="absolute top-0 h-full w-full object-cover  bg-center"
       />
       <div className="bg-black flex flex-col absolute top-0 opacity-50   left-0 size-full"></div>
 

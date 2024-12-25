@@ -33,16 +33,15 @@ const Footer = () => {
           <h5 className="text-xs lg:text-xl">Address:</h5>
 
           <p className="mt-2 text-sm lg:text-base lg:mt-8">
-            Washyard laundromat, 47 Allen Avenue (Studio 24 Building), Ikeja,
-            Lagos, Nigeria.
+          80 αddσ rσαd, σppσѕítє єnчσ fíllíng ѕtαtíσn, αjαh, lαgσѕ, Nigeria
           </p>
         </div>
         <div className="flex flex-col  text-left text-sm  mt-8 lg:mt-4">
           <h5 className="text-xs lg:text-xl ">Email & Phone</h5>
 
-          <p className="mt-2 text-sm lg:text-base lg:mt-8">+23408099243333</p>
+          <p className="mt-2 text-sm lg:text-base lg:mt-8">+2348061164856</p>
 
-          <p className="mt-2 text-sm lg:text-base ">hello@washyard.com</p>
+          <p className="mt-2 text-sm lg:text-base ">sparkulsservices@gmail.com</p>
         </div>
         </div>
       

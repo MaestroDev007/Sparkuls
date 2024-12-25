@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import img from "../../Images/pexels-gratisography-4414.jpg";
 import img2 from "../../Images/pexels-tima-miroshnichenko-8774568.jpg";
 import SVGIcon from "../../Config/SVGIcon";
-// lg:bg-[#1B75BC]
+// lg:bg-[#1B75BC] 
 const Laundromat = () => {
+
+const handleContact = () => {
+  const Message = "Hi there, Id like to Make Enquiries"
+    const phoneNumber = "+2348061164856";
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      Message
+    )}`;
+    window.open(whatsappURL, "_blank");
+}
+
   return (
     <section className="relative pb-12"> 
     <div
@@ -107,7 +117,7 @@ const Laundromat = () => {
           <SVGIcon
             iconName={`Laundromat`}
             height={`40px`}
-            className="fill-black
+            className="fill-white/70
           "/>
           <h4 className="text-sm sm:text-base mt-2 md:text-xl">
             Self Wash & Dry
@@ -123,7 +133,7 @@ const Laundromat = () => {
           <SVGIcon
             iconName={`chill`}
             height={`40px`}
-            className="fill-black"
+            className="fill-white/70"
           />
           <h4 className="text-sm sm:text-base mt-2 md:text-xl">Chill</h4>
 
@@ -134,7 +144,9 @@ const Laundromat = () => {
         </div>
       </div>
 
-      <button className="hidden lg:text-black lg:bg-white lg:rounded-full lg:px-8 lg:py-4 lg:mx-auto lg:flex lg:items-center lg:justify-center lg:text-xl lg:border-2 lg:border-white lg:mt-20 lg:font-semibold lg:capitalize lg:hover:text-white lg:hover:bg-black lg:hover:border-black transition-all duration-300 lg:mb-20">
+      <button 
+      onClick = {handleContact}
+      className="hidden lg:text-black lg:bg-white lg:rounded-full lg:px-8 lg:py-4 lg:mx-auto lg:flex lg:items-center lg:justify-center lg:text-xl lg:border-2 lg:border-white lg:mt-20 lg:font-semibold lg:capitalize lg:hover:text-white lg:hover:bg-black lg:hover:border-black transition-all duration-300 lg:mb-20">
         Contact Us
         
       </button>

@@ -129,7 +129,7 @@ const DryClean = () => {
             </p>
           </div>
 
-          <div className="mt-8 p-2 opacity-80 rounded-xl shadow-xl border-2 md:mt-16 backdrop-blur-sm bg-white/10 lg:hidden">
+          {/* <div className="mt-8 p-2 opacity-80 rounded-xl shadow-xl border-2 md:mt-16 backdrop-blur-sm bg-white/10 lg:hidden">
             <p className=" mt-2 text-center md:text-2xl ">
               Standard 3-4 day turnaround for all orders
             </p>
@@ -196,9 +196,9 @@ const DryClean = () => {
                 <p>$999</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-
+{/* 
         <div className="hidden lg: ">
           <p className=" mt-2 text-center md:text-2xl ">
             Standard 3-4 day turnaround for all orders
@@ -266,7 +266,7 @@ const DryClean = () => {
               <p>$999</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <button
          onClick={handleShowWashFoldModal}

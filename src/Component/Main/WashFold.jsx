@@ -109,7 +109,7 @@ const WashFold = () => {
               </p>
             </div>
 
-            <div className="shadow-md rounded-xl p-4 border-2 border-secondary mt-8 md:mt-16 ">
+            <div className="shadow-md rounded-xl p-4 border-2 border-white mt-8 md:mt-16 ">
               <h3 className="font-semibold text-xl md:text-3xl ">
                 Schedule A Pick-Up
               </h3>
