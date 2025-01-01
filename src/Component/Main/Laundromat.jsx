@@ -27,10 +27,14 @@ const handleContact = () => {
     <div
       className={`px-10 pt-8 mt-10 md:mt-24 lg:flex lg:mx-auto lg:px-16 lg:mt-20 xl:px-[7%] lg:flex-col lg:text-white`}>
       <div className="flex items-center px-8 lg:px-40 lg:flex lg:items-center lg:justify-center lg:-translate-y-8 xl:-translate-y-16">
-        <div className="flex-grow border-t border-gray-400"></div>
+        <div className="flex-grow border-t border-gray-400"
+        ></div>
         <span className="mx-4 text-white ">Laundromat</span>
         <div className="flex-grow border-t border-gray-400"></div>
       </div>
+
+
+
 
       <h2 className="sticky text-4xl leading-[45px] pt-8 text-center font-semibold sm:text-4xl md:text-5xl md:px-[15%] md:leading-[60px] lg:pt-12">
         {" "}

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import logo from ".././Images/SPARKULS-removebg-preview.png";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
@@ -20,37 +20,35 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
     //   userName: "UserName",
     // },
   });
-// const sendToGmail = (data) =>
-// {
-//   const emailParams = {
-//     firstName : data.firstName,n
-
-//     lastName : data.lastName,
-//     address: data.address,
-//     phone:data.phone,
-//     service:data.service,
-//     carriage:data.carriage
-//   }
-
-
-// }
-//   emailjs
-//   .send(
-//     "service_jsraq5e",
-//     "",
-//     emailParams,
-//     ""
-//   )
-//   .then(
-//     (response)=> {
-//       alert("Email Sent Successfully");
-//       reset()
-//     },
-//     (error) => {
-//       alert("Failed to send Message")
-//     }
-//   )
-
+  const sendToGmail = (data) => {
+    const emailParams = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      address: data.address,
+      phone: data.phone,
+      service: data.service,
+      carriage: data.carriage,
+ 
+    };
+  
+    emailjs
+      .send(
+        "service_bntkwfb",          // Replace with your EmailJS Service ID
+        "template_fyf0qy4",         // Replace with your EmailJS Template ID
+        emailParams,
+        "4T6eK0-J-vHS2RqTM"         // Replace with your EmailJS Public Key
+      )
+      .then(
+        (response) => {
+          alert("Email Sent Successfully");
+          reset();
+        },
+        (error) => {
+          alert("Failed to send Message");
+        }
+      );
+  };
+  
   const sendToWhatsapp = (data) => {
     const Message = `Hello, My name is ${data.userName} from ${data.address}, requesting for a ${data.service}. \nHere is a description of my Laundry:`;
 
@@ -59,9 +57,18 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
       Message
     )}`;
     window.open(whatsappURL, "_blank");
-    reset()
+    reset();
   };
 
+
+  useEffect(() => {
+    if (WashFoldModalRef) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [WashFoldModalRef]);
+  
   return (
     <section
       ref={WashFoldModalRef}
@@ -83,7 +90,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
         <fieldset className="text-white mt-4 md:mt-10">
           <form
             onSubmit={handleSubmit((data) => {
-              sendToWhatsapp(data);
+              // sendToWhatsapp(data);
               // sendToGmail(data);
             })}
             className="flex flex-col items-center gap-4 text-sm w-full md:text-xl md:items-start md:gap-10 md:px-12">
@@ -106,7 +113,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
               </select>
             </div>
 
-            <div  className="flex flex-col gap-4 w-full md:flex-row md:mx-auto md:items-center md:justify-evenly">
+            <div className="flex flex-col gap-4 w-full md:flex-row md:mx-auto md:items-center md:justify-evenly">
               {/* Full Name */}
               <div className="flex flex-col gap-4 md:flex-row items-center">
                 {/* <label
@@ -129,7 +136,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
               </div>
 
               <div>
-              <input
+                <input
                   type="text"
                   id="userName"
                   placeholder="Last Name"
@@ -156,8 +163,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
                 id="address"
                 placeholder="Address"
                 {...register("address", {
-                  required:  "Please Fill In An Address",
-                  
+                  required: "Please Fill In An Address",
                 })}
                 className="placeholder:text-xs backdrop-blur-md bg-white/20 text-white rounded-md outline-none p-2 placeholder:text-white/80 w-full md:p-3 md:placeholder:text-base md:mx-4"
               />
@@ -198,6 +204,7 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
                 <option>Vehicle Size Carriage</option>
               </select>
             </div>
+            
 
             {/* Terms of Service */}
             <div className="mt-4 text-xs flex gap-2 mx-4">
@@ -214,14 +221,14 @@ const WashFoldModal = ({ setShowWashFoldModal, showWashFold }) => {
             </div>
             <div className="flex gap-6 items-center justify-center my-4 md:my-0 md:-translate-y-[4.25rem] md:gap-12 md:translate-x-48 md:text-sm">
               <button
-                type="submit"
-                onSubmit={handleSubmit(sendToWhatsapp)}
+                type="button"
+                onClick={() => handleSubmit(sendToWhatsapp)()}
                 className="text-black bg-white py-2 px-4 font-semibold rounded-xl mx-auto flex items-center hover:">
                 Send To Whatsapp
               </button>
               <button
                 type="submit"
-                onSubmit={handleSubmit(sendToWhatsapp)}
+                onClick={() => handleSubmit(sendToGmail)()}
                 className="text-black bg-white py-2 px-4 font-semibold rounded-xl mx-auto flex items-center hover:">
                 Send To Gmail
               </button>
