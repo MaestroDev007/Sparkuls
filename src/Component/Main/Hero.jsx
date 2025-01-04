@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import SideBar from "../SideBar/SideBar";
 // import heroVideo from "../../Videos/sparkuls.mp4";
-import heroVideo from "../../Videos/sparkuls.webm"
+import heroVideo from "../../Videos/sparkuls.webm";
 import { SvgIcon } from "@mui/material";
 import SVGIcon from "../../Config/SVGIcon";
 import { Nav } from "../../Constants/index.js";
 import logo from "../../Images/SPARKULS-removebg-preview.png";
-import { NavLink } from "react-router-dom";
+import { HashLink as NavLink } from "react-router-hash-link";
 import Modal from "../../Config/Modal.jsx";
 
 const Hero = () => {
@@ -68,7 +68,7 @@ const Hero = () => {
                 <li
                   className=" NavLink underlined "
                   key={item.id}>
-                  <NavLink>{item.title}</NavLink>
+                  <NavLink smooth to={item.route}>{item.title}</NavLink>
                 </li>
               ))}
             </ul>

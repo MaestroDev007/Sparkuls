@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import SVGIcon from "../../Config/SVGIcon";
 import logo from "../../Images/SPARKULS-removebg-preview.png"
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import {HashLink as NavLink} from "react-router-hash-link"
 import { Nav } from "../../Constants/index.js";
 
 
@@ -111,8 +111,9 @@ const Header = () => {
             <ul className="overflow-x-hidden text-[.9rem] py-5 flex flex-col gap-20 whitespace-pre ">
               {Nav.map((item) => (
                 <li key={item.id}>
-                  <NavLink
-                    to={`/`}
+                  <NavLink smooth
+                    to={item.route}
+                    onClick={handleClose}
                     className={`flex items-center font-bold  text-xl gap-4 rounded-md duration-300  text-white  px-1 md:cursor-pointer  w-full `}>
                     <SVGIcon
                       iconName={item.iconName}

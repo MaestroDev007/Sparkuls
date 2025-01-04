@@ -3,7 +3,8 @@ import logo from "../../Images/SPARKULS-removebg-preview.png"
 
 const Footer = () => {
   return (
-    <footer className=" text-white px-10  ">
+    <footer className=" text-white px-10  "
+    id="contact">
       <figure className="w-[150px] md:w-[300px] h-[100px]">
         <img src={logo} />
       </figure>

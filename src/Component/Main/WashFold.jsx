@@ -14,7 +14,8 @@ const WashFold = () => {
   
 
   return (
-    <section className="relative bg-opacity-20 ">
+    <section className="relative bg-opacity-20 "
+    id="washFold">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat "
         style={{

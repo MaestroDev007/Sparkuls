@@ -19,6 +19,7 @@ const DryClean = () => {
 
 <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat "
+    id="dryClean"
     style={{
       backgroundImage: `url(${img2})`,
       opacity: 0.1, // Adjust the opacity as needed

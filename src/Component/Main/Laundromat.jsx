@@ -15,7 +15,8 @@ const handleContact = () => {
 }
 
   return (
-    <section className="relative pb-12"> 
+    <section className="relative pb-12"
+    id="laundromat"> 
     <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat "
     style={{
